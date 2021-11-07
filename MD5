@@ -1,11 +1,11 @@
-70c6cef506efff2a2c0edbc01026c1a1 *DESCRIPTION
+f15ae971ecb210abddbd6fd63c1f3d67 *DESCRIPTION
 98abb0c9f18064e3a2a9968974824946 *LICENSE
 150d2ffce55b0990eef1eb0b89fdb7d4 *NAMESPACE
 39bf935ead9e2e02d4eaf4240e7c9762 *NEWS.md
-432102539b759db97862524f252b0ee7 *R/data_capture_client.R
-21470f7bcc4da6f11d6307386874a6cd *R/data_capture_client_utils.R
-f580de115e3f64ae4a9f758f3eb0b710 *README.md
-fb2e20485f4739db59b59e830027487a *man/DataCaptureClient-class.Rd
+a62ac8acac3af6190d7383f9e8b2decb *R/data_capture_client.R
+8d919234b33c8b82587105e26ee42ca8 *R/data_capture_client_utils.R
+4354619b05748c01ad7142797d72b691 *README.md
+8e816e782fbe92bf2dd54e3e1c334aa6 *man/DataCaptureClient-class.Rd
 1ec6c93df58147bc03d24c147900c013 *tests/testthat.R
-63d2f602eb3ce077547824e522582cf1 *tests/testthat/test_data_capture_client.R
+ba4325ada281b85f4022745fcf884fd6 *tests/testthat/test_data_capture_client.R
 3cd7778d41a71bd6a00c8beca4fc87fa *tests/testthat/test_data_capture_client_utils.R

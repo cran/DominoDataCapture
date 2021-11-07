@@ -30,7 +30,7 @@ data_capture_client <- DataCaptureClient(
 feature_names = c("sepal.length", "sepal.width", "petal.length"),
 predict_names = c("variety")
 )
-data_capture_client$capture_prediction(
+data_capture_client$capturePrediction(
 feature_values = c(sepal_length, sepal_width, petal_length),
 predict_values = c(predicted_value),
 event_id = event_id

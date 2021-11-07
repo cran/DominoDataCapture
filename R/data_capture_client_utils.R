@@ -1,5 +1,3 @@
-library("lgr")
-
 get_current_timestamp <- function() {
   tm <- as.POSIXlt(Sys.time(), tz = "UTC")
   return(strftime(tm, "%Y-%m-%dT%H:%M:%S%z", usetz = TRUE))

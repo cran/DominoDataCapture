@@ -1,5 +1,3 @@
-library("uuid")
-library("rjson")
 #' Data Capture Client
 #'
 #' Data Capture Client to help capture prediction data
@@ -17,7 +15,7 @@ library("rjson")
 #' feature_names = c("sepal.length", "sepal.width", "petal.length"),
 #' predict_names = c("variety")
 #' )
-#' data_capture_client$capture_prediction(
+#' data_capture_client$capturePrediction(
 #' feature_values = c(sepal_length, sepal_width, petal_length),
 #' predict_values = c(predicted_value),
 #' event_id = event_id
@@ -32,7 +30,7 @@ DataCaptureClient <- setRefClass( # nolint
     instance_id = "character"
   ),
   methods = list(
-    capture_prediction = function(feature_values,
+    capturePrediction = function(feature_values,
                                  predict_values,
                                  metadata_values = NULL,
                                  event_id = NULL,
@@ -41,7 +39,7 @@ DataCaptureClient <- setRefClass( # nolint
                                  sample_weight = NULL) {
       data <- list()
       tryCatch({
-        error_prefix <- "ERROR DominoDataCapture::capture_prediction"
+        error_prefix <- "ERROR DominoDataCapture::capturePrediction"
         if (length(feature_names) != length(feature_values)) {
           print(paste(
             error_prefix,
@@ -79,13 +77,13 @@ DataCaptureClient <- setRefClass( # nolint
         if (missing(event_id)) {
           event_id <- uuid::UUIDgenerate()
         }
-        cur_time <- get_current_timestamp()
+        current_time <- get_current_timestamp()
         if (missing(timestamp)) {
-          data$timestamp <- cur_time
+          data$timestamp <- current_time
         } else {
           data$timestamp <- timestamp
         }
-        data$"__domino_timestamp" <- cur_time # nolint
+        data$"__domino_timestamp" <- current_time # nolint
         data$event_id <- event_id
 
         data$instance_id <- get_instance_id(instance_id)

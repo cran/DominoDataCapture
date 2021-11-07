@@ -48,7 +48,7 @@ RUN R --no-save -e "devtools::install_github('cerebrotech/r-prediction-logging',
 ```R
 library("DominoDataCapture")
 data_capture_client <- DataCaptureClient(feature_names=c("min","max"),predict_names=c("prediction"))
-data_capture_client$capture_prediction(c(1,100), c("2"))
+data_capture_client$capturePrediction(c(1,100), c("2"))
 ```
 
 ## Example
@@ -69,11 +69,11 @@ data_capture_client <- DataCaptureClient(
 # To call model use: {"data": {"min": 1, "max": 100}}
 my_model <- function(min, max) {
   random_number <- runif(1, min, max)
-  data_capture_client$capture_prediction(c(min,max), c(random_number))
+  data_capture_client$capturePrediction(c(min,max), c(random_number))
   return(list(number=random_number))
 }
 ```
 
 # Support policy
-  * For support policy please refer to the readme.txt present in this repo.
+  * For support policy please refer to `readme.txt` present in this repository.
 
